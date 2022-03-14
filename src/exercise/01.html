@@ -11,8 +11,36 @@
 <!-- 🐨 Create a div -->
 <!--   💰 document.createElement('div') -->
 
+<body>
+        <div id="rootElement"></div>
+</body>
+<script type="module">
+    // Get Element IS
+    const rootElement = document.getElementById('rootElement');
+    // Create div element
+    const element = document.createElement('div');
+    //  Add TextContent
+    rootElement.textContent = 'Hello world';
+    // Add Class
+    element.className = 'container';
+    // Append to element with id of root
+    rootElement.append(element);
+</script>
+
+<script type="module">
+    // Create div element
+    const element = document.createElement('div');
+    // Add Id
+    element.id = 'root';
+    //  Add TextContent
+    element.textContent = 'Hello New Root';
+    //  Attach to document body
+    document.body.appendChild(element);
+</script>
+
 <!-- 🐨 Set the div's textContent to 'Hello World' and className to 'container' -->
 <!--   💰 div.textContent = '...' -->
+
 
 <!-- 🐨 Append the div to the root div using `append` -->
 <!--   💰 document.getElementById('root') -->
