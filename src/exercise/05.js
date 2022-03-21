@@ -3,6 +3,7 @@
 
 import * as React from 'react'
 import '../box-styles.css'
+import {orange} from '@kentcdodds/react-workshop-app/dist/styles/colors'
 
 // 🐨 add a className prop to each div and apply the correct class names
 // based on the text content
@@ -14,16 +15,48 @@ import '../box-styles.css'
 // 🐨 also use the style prop to make the font italic
 // 💰 Here are available style attributes: backgroundColor, fontStyle
 
-const smallBox = <div>small lightblue box</div>
-const mediumBox = <div>medium pink box</div>
-const largeBox = <div>large orange box</div>
+const smallBox = (
+  <div
+    className="box box--small"
+    style={{fontStyle: 'italic', background: 'lightblue'}}
+  >
+    small lightblue box
+  </div>
+)
+const mediumBox = (
+  <div
+    className="box box--medium"
+    style={{fontStyle: 'italic', background: 'pink'}}
+  >
+    medium pink box
+  </div>
+)
+const largeBox = (
+  <div
+    className="box box--large"
+    style={{fontStyle: 'italic', background: 'orange'}}
+  >
+    large orange box
+  </div>
+)
+
+function Box({size, color}) {
+  return (
+    <div
+      className={'box box--' + size}
+      style={{fontStyle: 'italic', background: color}}
+    >
+      {size} {color} box
+    </div>
+  )
+}
 
 function App() {
   return (
     <div>
-      {smallBox}
-      {mediumBox}
-      {largeBox}
+      <Box size="small" color="lightblue" />
+      <Box size="medium" color="pink" />
+      <Box size="large" color="orange" />s
     </div>
   )
 }
