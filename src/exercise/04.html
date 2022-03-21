@@ -8,7 +8,7 @@
   <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
   <script type="text/babel">
     // 🐨 Make a function called `message` which returns the JSX we want to share
-    function message (children) {
+    function message ({children}) {
       return <div className="message">{children}</div>
     }
 
