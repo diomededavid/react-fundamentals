@@ -35,14 +35,15 @@
     // 💰 The example in the markdown file should be a good hint for you.
 
 
-    const rootElement = document.getElementById('root')
-    const reactElement = React.createElement('div', {
+    const rootElement = document.getElementById('root');
+    const reactElementProps = {
       className: 'container',
       children: [
-        React.createElement('span', null, 'Hello '),
-        React.createElement('span', null, 'World'),
+        React.createElement('span', {}, 'Hello '),
+        React.createElement('span', {}, 'World'),
       ]
-    });
+    }
+    const reactElement = React.createElement('div', reactElementProps);
     ReactDOM.render(reactElement, rootElement);
   </script>
 </body>

@@ -23,18 +23,12 @@
 
     const rootElement = document.getElementById('root')
 
-    // 1. Create Element type
-    const elementType = 'h1';
-
-    // 2. Create Element Props
-    const elementProps = {
+    // 3. Create React Element
+    const reactElement = React.createElement('div', {
       id: 'element-id',
       children: 'Hello World',
       className: 'container'
-    };
-
-    // 3. Create React Element
-    const reactElement = React.createElement(elementType, elementProps);
+    });
 
     // Render React Elelement in DOM
     ReactDOM.render(reactElement, rootElement);

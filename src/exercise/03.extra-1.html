@@ -26,7 +26,9 @@
     // `className` rather than `class`!
     // 📜 You can learn the differences between JSX and HTML syntax from the React docs here:
     // https://reactjs.org/docs/dom-elements.html#differences-in-attributes
-    const element = <div className="container">Hello World</div>;
+    const className = 'container'
+    const children = 'Hello World';
+    const element = <div className={className}>{children}</div>;
 
     ReactDOM.render(element, document.getElementById('root'))
   </script>
