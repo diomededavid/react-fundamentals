@@ -15,37 +15,28 @@ import {orange} from '@kentcdodds/react-workshop-app/dist/styles/colors'
 // 🐨 also use the style prop to make the font italic
 // 💰 Here are available style attributes: backgroundColor, fontStyle
 
-const smallBox = (
-  <div
-    className="box box--small"
-    style={{fontStyle: 'italic', background: 'lightblue'}}
-  >
-    small lightblue box
-  </div>
-)
-const mediumBox = (
-  <div
-    className="box box--medium"
-    style={{fontStyle: 'italic', background: 'pink'}}
-  >
-    medium pink box
-  </div>
-)
-const largeBox = (
-  <div
-    className="box box--large"
-    style={{fontStyle: 'italic', background: 'orange'}}
-  >
-    large orange box
-  </div>
-)
+function Box({className = ' ', style, ...otherProps}) {
+  return (
+    <div
+      className={`box ${className}`}
+      style={{fontStyle: 'italic', ...style}}
+      {...otherProps}
+    />
+  )
+}
 
 function App() {
   return (
     <div>
-      {smallBox}
-      {mediumBox}
-      {largeBox}
+      <Box className="box--small" style={{background: 'lightblue'}}>
+        small lightblue box
+      </Box>
+      <Box className="box box--medium" style={{background: 'pink'}}>
+        medium pink box
+      </Box>
+      <Box className="box box--large" style={{background: 'orange'}}>
+        large orange box
+      </Box>
     </div>
   )
 }
