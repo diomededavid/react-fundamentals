@@ -27,11 +27,13 @@ function UsernameForm({onSubmitUsername}) {
           ref={usernameInputRef}
           id="usernameInput"
           type="text"
-          onBlur={handleChange}
+          onChange={handleChange}
         />
       </div>
       <div style={{color: 'red'}}>{error}</div>
-      <button type="submit">Submit</button>
+      <button disabled="true" type="submit">
+        Submit
+      </button>
     </form>
   );
 }
